@@ -1,0 +1,29 @@
+/* Container for Both Charts */
+.sales-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Chart Cards */
+.chart-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;  /* Each takes 50% width */
+}
+
+/* Chart Container */
+.chart-container {
+  height: 250px;
+  margin-top: 20px;
+}
+
+/* Sales Info */
+.sales-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

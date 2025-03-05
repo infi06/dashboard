@@ -1,0 +1,102 @@
+/* Main container with sidebar + dashboard */
+.container {
+  display: flex;
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Prevent scrolling on full page */
+}
+
+/* Sidebar (Fixed on Left) */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Dashboard Content (Scrollable) */
+.dashboard {
+  margin-left: 250px; /* Adjust based on sidebar width */
+  flex: 1;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto; /* Scroll only this section */
+  background: #f4f4f4;
+}
+
+.dashboard-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Simulated content for scrolling */
+.scroll-content {
+  height: 1200px; /* Just for demo scrolling */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Right icons container */
+.right-icons {
+  position: fixed; /* Fix the icons on the right side */
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row; /* Stack icons vertically */
+  gap: 15px; /* Space between icons */
+  z-index: 10; /* Make sure icons are on top of other content */
+}
+
+/* Styling for each icon */
+.icon {
+  font-size: 24px; /* Set size for icons */
+  color: #333; /* Set color for icons */
+  cursor: pointer; /* Make icons clickable */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for icons */
+.icon:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.dashboard-flex-container {
+  display: flex; /* Use flexbox to align the content */
+  justify-content: space-between; /* Space between the sections */
+  align-items: center; /* Vertically center items */
+  padding: 20px; /* Add padding for spacing */
+}
+
+/* Left section (Dashboard heading) */
+.left-section {
+  flex: 1; /* Take available space */
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0; /* Remove margin for better alignment */
+}
+
+/* Right section (Calendar input and button) */
+.right-section {
+  display: flex;
+  gap: 20px; /* Space between calendar input and button */
+  align-items: center; /* Vertically center items */
+}
+

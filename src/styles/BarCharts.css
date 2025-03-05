@@ -1,0 +1,40 @@
+/* Container for both charts */
+.charts-container {
+  display: flex; /* Arrange in a row */
+  justify-content: space-between; /* Space between charts */
+  gap: 20px; /* Spacing between cards */
+  margin: 20px 0;
+}
+
+/* Chart Card Styling */
+.chart-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%; /* Each chart takes 48% of width */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header for Each Chart */
+.chart-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Chart Box */
+.chart-box {
+  width: 100%;
+  height: 250px;
+}

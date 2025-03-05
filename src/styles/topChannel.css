@@ -1,0 +1,54 @@
+/* Parent Container: Arrange Chart & Table in a Single Row */
+.top-channel-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Chart & Table Card Styling */
+.chart-card, .table-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;  /* Both take 50% width */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Align Table Data to Left */
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;  /* Aligns text & icons to the left */
+}
+
+/* Center Header Text */
+th {
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Align Source Column (Icons + Text) */
+td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;  /* Adds spacing between icon & text */
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 18px;
+}
+
+/* Different Colors for Each Icon */
+.github { color: #333; }
+.facebook { color: #1877f2; }
+.vimeo { color: #1ab7ea; }
+.india-hackers { color: #ff6600; }
