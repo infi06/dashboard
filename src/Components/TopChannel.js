@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import C3Chart from "c3";
-import "c3/c3.css"; // Import C3 styles
-import { FaGithub, FaFacebook, FaVimeo, FaLaptopCode } from "react-icons/fa"; // Import icons
-import "../styles/topChannel.css"; // Custom styles
+import "c3/c3.css";
+import { FaGithub, FaFacebook, FaVimeo, FaLaptopCode } from "react-icons/fa";
+import "../styles/topChannel.css";
 
 const TopChannel = () => {
   useEffect(() => {
-    // Create Pie Chart for "Top Countries"
+
     C3Chart.generate({
-      bindto: "#pie-chart", // Unique ID for pie chart
+      bindto: "#pie-chart",
       data: {
         columns: [
           ["US", 45],
@@ -22,13 +22,13 @@ const TopChannel = () => {
 
   return (
     <div className="top-channel-container">
-      {/* First Card: Pie Chart */}
+
       <div className="chart-card">
         <h2>Top Countries</h2>
         <div id="pie-chart" className="chart-box"></div>
       </div>
 
-      {/* Second Card: Table */}
+
       <div className="table-card">
         <h2>Top Channel</h2>
         <table>

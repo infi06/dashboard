@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import C3Chart from "c3";
-import "c3/c3.css"; // Import C3 styles
-import "../styles/BarCharts.css"; // Custom styles
+import "c3/c3.css";
+import "../styles/BarCharts.css";
 
 const BarChart = () => {
   useEffect(() => {
-    // Create Bar Chart for "Direct Vs Indirect"
+
     C3Chart.generate({
-      bindto: "#bar-chart", // Unique ID for the bar chart
+      bindto: "#bar-chart",
       data: {
         columns: [
-          ["Direct", 245], // Direct Value
-          ["Indirect", 45], // Indirect Value
+          ["Direct", 245],
+          ["Indirect", 45],
         ],
         type: "bar",
         colors: {
@@ -21,14 +21,14 @@ const BarChart = () => {
       },
       bar: {
         width: {
-          ratio: 0.5, // Adjust bar width
+          ratio: 0.5,
         },
       },
       axis: {
         x: {
           label: "Category",
           type: "category",
-          categories: ["Direct", "Indirect"], // X-axis labels
+          categories: ["Direct", "Indirect"],
         },
         y: {
           label: "Amount ($)",
@@ -36,14 +36,14 @@ const BarChart = () => {
       },
     });
 
-    // Create Area Spline Chart for "Real-Time Value"
+
     C3Chart.generate({
-      bindto: "#area-spline-chart", // Changed ID
+      bindto: "#area-spline-chart",
       data: {
         columns: [
-          ["Real-Time", 50, 65, 75, 85, 95, 100], // Sample values
+          ["Real-Time", 50, 65, 75, 85, 95, 100],
         ],
-        type: "area-spline", // Changed to area spline chart
+        type: "area-spline",
         colors: {
           "Real-Time": "#dc3545",
         },
@@ -52,7 +52,7 @@ const BarChart = () => {
         x: {
           label: "Time",
           tick: {
-            values: [1, 2, 3, 4, 5, 6], // Example time points
+            values: [1, 2, 3, 4, 5, 6],
           },
         },
         y: {
@@ -64,22 +64,26 @@ const BarChart = () => {
 
   return (
     <div className="charts-container">
-      {/* First Card: Bar Chart */}
+
       <div className="chart-card">
         <div className="chart-header">
-          <h2>Direct Vs Indirect</h2>
-          <h3>$245 Direct | $45 Indirect</h3>
+        <h2>Direct Vs Indirect</h2>
+        <h3>
+  <span className="circle blue-circle"></span>$245 Direct
+  <span className="circle violet-circle"></span>$45 Indirect
+</h3>
         </div>
         <div id="bar-chart" className="chart-box"></div>
       </div>
 
-      {/* Second Card: Area Spline Chart */}
       <div className="chart-card">
         <div className="chart-header">
           <h2>Real-Time Value</h2>
-          <h3>$85</h3>
+          <h1>
+  $42,15 <sup className="percentage-badge">+45%</sup>
+</h1>
         </div>
-        <div id="area-spline-chart" className="chart-box"></div> {/* Updated ID */}
+        <div id="area-spline-chart" className="chart-box"></div>
       </div>
     </div>
   );

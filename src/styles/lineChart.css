@@ -1,30 +1,32 @@
-/* Container for the cards */
+
 .card-container {
-  display: flex; /* Arrange cards in a row */
-  justify-content: space-between; /* Space out the cards */
-  gap: 20px; /* Add space between cards */
-  margin: 20px 0; /* Add top and bottom margin */
+  display: flex;
+
+  gap: 20px;
+  justify-content: space-around;
+  padding-top: 20px;
+  margin-left: 20px;
 }
 
-/* Card styling */
+
 .card {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%; /* Each card takes up 30% of the available width */
+  width: 30%;
   display: flex;
   flex-direction: column;
 }
 
-/* Card Content Layout */
+
 .card-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Left side content (Acme Plus, Sales, Price) */
+
 .left-side {
   text-align: left;
 }
@@ -42,15 +44,49 @@ h2 {
   color: #555;
 }
 
-/* Right side content (Ellipsis) */
+
 .right-side {
   font-size: 1.5rem;
   color: #888;
 }
 
-/* Chart Container */
+
 .chart-container {
   margin-top: 20px;
   width: 100%;
-  height: 250px; /* Adjust the height of the chart */
+  height: 250px;
+}
+
+.sales-value {
+  display: flex;
+  align-items: start;
+
+  gap: 8px;
+}
+
+.percentage-badge {
+  position: relative;
+  color: green;
+  font-size: 1.2em;
+}
+
+.percentage-badge sup {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  font-size: 0.8em;
+  color: green;
+}
+.percentage-badge-red {
+  position: relative;
+  color:red;
+  font-size: 1.2em;
+}
+
+.percentage-badge-red sup {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  font-size: 0.8em;
+  color:red;
 }

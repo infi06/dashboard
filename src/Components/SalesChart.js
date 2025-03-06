@@ -10,7 +10,7 @@ const SalesChart = () => {
   useEffect(() => {
     if (lineChartRef.current) {
       c3.generate({
-        bindto: lineChartRef.current, // Use ref instead of ID
+        bindto: lineChartRef.current,
         data: {
           columns: [["Sales", 150, 200, 250, 300, 350, 400, 450]],
           type: "line",
@@ -29,7 +29,7 @@ const SalesChart = () => {
 
     if (barChartRef.current) {
       c3.generate({
-        bindto: barChartRef.current, // Use ref instead of ID
+        bindto: barChartRef.current,
         data: {
           columns: [
             ["Refunds", 20, 30, 15, 25, 40, 35, 50],
@@ -53,20 +53,28 @@ const SalesChart = () => {
 
   return (
     <div className="sales-container">
-      {/* First Card: Sales Over Time */}
+
       <div className="chart-card">
-        <h1>Sales Over Time (Stores)</h1>
+        <h2>Sales Over Time (Stores)</h2>
         <div className="sales-info">
-          <h1>$514</h1>
-          <h3>Current vs Previous</h3>
+        <h1>
+  $32,15 <sup className="percentage-badge">-35%</sup>
+</h1>
+        <div>
+        <span className="circle blue-circle"></span>Current
+        <span className="circle violet-circle"></span>  Previous
+        </div>
+
         </div>
         <div ref={lineChartRef} className="chart-container"></div>
       </div>
 
-      {/* Second Card: Sales vs Refunds */}
+
       <div className="chart-card">
-        <h1>Sales vs Refund</h1>
-        <h1>$65</h1>
+        <h2>Sales vs Refund</h2>
+        <h1>
+  $22,12 <sup className="percentage-badge">-22%</sup>
+</h1>
         <div ref={barChartRef} className="chart-container"></div>
       </div>
     </div>

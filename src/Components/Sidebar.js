@@ -1,20 +1,31 @@
 import React from "react";
+import logo from '../logo.svg';
+import { FaHome, FaShoppingCart, FaCaretDown } from "react-icons/fa"; // Import required icons
 import "../styles/sidebar.css";
 
 const Sidebar = ({ children }) => {
   return (
     <div className="container">
-      {/* Sidebar */}
+
       <aside className="sidebar">
-        <h2>Sidebar</h2>
+
+        <div className="logo">
+          <img src={logo} alt="Logo" className="sidebar-logo" />
+        </div>
+        <h2 style={{"color":"white"}}>Pages</h2>
         <ul>
-          <li>Dashboard</li>
-          <li>Reports</li>
-          <li>Settings</li>
+          <li>
+            <FaHome />
+            Dashboard <FaCaretDown />
+          </li>
+          <li>
+            <FaShoppingCart />
+            Ecommerce <FaCaretDown />
+          </li>
         </ul>
       </aside>
 
-      {/* Main Dashboard Content */}
+
       <main className="dashboard">{children}</main>
     </div>
   );

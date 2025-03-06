@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <Sidebar>
       <div className="dashboard-content">
-        {/* Right icons */}
+
         <div className="right-icons">
           <FaSearch className="icon" title="Search" />
           <FaEnvelope className="icon" title="Messages" />
@@ -20,17 +20,17 @@ const Dashboard = () => {
           <FaArrowRight className="icon" title="Next" />
         </div>
 
-        {/* Flex container for left and right sections */}
+
         <div className="dashboard-flex-container">
-          {/* Left section */}
+
           <div className="left-section">
             <h1>Dashboard</h1>
           </div>
 
-          {/* Right section */}
+
           <div className="right-section">
             <input type="date" id="calendar" className="calendar-input" />
-            <input type="button" value="Add Value" className="add-value-button" />
+            <input type="button" value="Add View" className="add-value-button" />
           </div>
         </div>
       </div>
