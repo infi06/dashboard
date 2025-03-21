@@ -24,7 +24,7 @@ const Dashboard = () => {
         <div className="dashboard-flex-container">
 
           <div className="left-section">
-            <h1>Dashboard</h1>
+            <h1>Dashboard infi</h1>
           </div>
 
 
